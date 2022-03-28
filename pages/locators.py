@@ -11,5 +11,7 @@ class ImageLocators():
     FIRST_CATEGORIA_TEXT = (By.XPATH, "//div[contains(@class, 'PopularRequestList-SearchText')]")
     TEXT_SEARCH = (By.XPATH, "//li[contains(@class, 'mini-suggest')]//b")
     FIRST_IMAGE = (By.XPATH, "//div[contains(@class, 'item__preview')]//a[contains(@class, 'item__link')]")
+    BUTTON_NEXT = (By.XPATH, "//div[contains(@class, 'ButtonNext')]")
+    BUTTON_PREV = (By.XPATH, "//div[contains(@class, 'ButtonPrev')]")
 
 

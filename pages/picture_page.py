@@ -26,17 +26,21 @@ class ImagePage(BasePage):
     def open_first_image(self):
         first_image = self.browser.find_element(*ImageLocators.FIRST_IMAGE)
         first_image.click()
-        time.sleep(10)
+
 
     def should_be_first_image(self):
         pass
 
 
     def click_button_next(self):
-        pass
+        button_next = self.browser.find_element(*ImageLocators.BUTTON_NEXT)
+        button_next.click()
+        time.sleep(5)
 
-    def click_button_back(self):
-        pass
+    def click_button_prev(self):
+        button_prev = self.browser.find_element(*ImageLocators.BUTTON_PREV)
+        button_prev.click()
+        time.sleep(5)
 
     # def equal_image_text_and_search_field(self):
     #     """Этот тест не всегда проходит, так как не всегда совпадает текст в поле поиска и подписть к картинке"""

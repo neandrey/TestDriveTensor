@@ -16,4 +16,6 @@ def test_picture_yandex(browser):
     image_page.open_first_categoria()
     image_page.search_field_correct_text(text=text_first_categoria)
     image_page.open_first_image()
+    image_page.click_button_next()
+    image_page.click_button_prev()
 
