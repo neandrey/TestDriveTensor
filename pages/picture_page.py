@@ -1,6 +1,5 @@
 from .base_page import BasePage
 from .locators import ImageLocators
-from selenium.webdriver.common.keys import Keys
 import time
 
 class ImagePage(BasePage):
@@ -22,16 +21,22 @@ class ImagePage(BasePage):
         assert text.find(text_field) != -1, "Not correct text in search field"
 
     def should_be_first_categoria(self):
-       pass
+        pass
 
     def open_first_image(self):
         first_image = self.browser.find_element(*ImageLocators.FIRST_IMAGE)
         first_image.click()
+        time.sleep(10)
 
     def should_be_first_image(self):
         pass
 
 
+    def click_button_next(self):
+        pass
+
+    def click_button_back(self):
+        pass
 
     # def equal_image_text_and_search_field(self):
     #     """Этот тест не всегда проходит, так как не всегда совпадает текст в поле поиска и подписть к картинке"""
