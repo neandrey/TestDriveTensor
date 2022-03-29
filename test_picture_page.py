@@ -3,7 +3,7 @@ from .pages.main_page import MainPage
 import  pytest
 
 
-@pytest.mark.need_review
+@pytest.mark.first_picture
 def test_picture_yandex(browser):
     link = "https://yandex.ru/"
     page = MainPage(browser, link)
@@ -15,6 +15,7 @@ def test_picture_yandex(browser):
     text_first_categoria = image_page.get_text_first_categoria()
     image_page.open_first_categoria()
     image_page.search_field_correct_text(text=text_first_categoria)
+    image_page.should_be_first_categoria()
     image_page.open_first_image()
     image_page.click_button_next()
     image_page.click_button_prev()

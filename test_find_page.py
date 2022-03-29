@@ -3,7 +3,7 @@ import pytest
 
 SEARCH_TEXT = "Тензор"
 
-@pytest.mark.need_review
+@pytest.mark.find_five_link
 def test_guest_can_find_five_link_tensor(browser):
     link = "https://yandex.ru/"
     page = MainPage(browser, link)
